@@ -47,6 +47,10 @@ class MainActivity : AppCompatActivity() {
 
             Toast.makeText(this, "${longClickedStudent} 길게 클릭됨", Toast.LENGTH_SHORT).show()
 
+            mStudentList.remove(longClickedStudent)
+
+            mAdapter.notifyDataSetChanged()
+
             return@setOnItemLongClickListener true
         }
 
